@@ -1,0 +1,19 @@
+auth:
+  generic:
+    type: FORM
+    static-resource: /resource/**
+    login-processing-url: /api/login
+    login-page: /resource/index.html#/access/signin
+    success-forward-url: /resource/index.html
+server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/saas?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 849010161
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/resource
